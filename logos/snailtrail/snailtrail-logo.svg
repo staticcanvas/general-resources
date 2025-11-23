@@ -1,0 +1,401 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   viewBox="0 0 200 200"
+   version="1.1"
+   id="svg29"
+   sodipodi:docname="snailtrail-logo.svg"
+   inkscape:version="1.4 (86a8ad7, 2024-10-11)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview29"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:zoom="3.3004209"
+     inkscape:cx="-14.392104"
+     inkscape:cy="124.98406"
+     inkscape:window-width="3840"
+     inkscape:window-height="2075"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg29" />
+  <defs
+     id="defs5">
+    <!-- Gradient for shell depth -->
+    <radialGradient
+       id="shellGrad"
+       cx="100"
+       cy="105"
+       fx="100"
+       fy="105"
+       r="50"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0927,0,0,1.0927,-4.7731914,-34.309299)">
+      <stop
+         offset="0%"
+         style="stop-color:#c49a6c;stop-opacity:1"
+         id="stop1" />
+      <stop
+         offset="50%"
+         style="stop-color:#8b5a2b;stop-opacity:1"
+         id="stop2" />
+      <stop
+         offset="100%"
+         style="stop-color:#5d3a1a;stop-opacity:1"
+         id="stop3" />
+    </radialGradient>
+    <!-- Shimmer gradient -->
+    <linearGradient
+       id="shimmer"
+       x1="118.5116"
+       y1="67.976467"
+       x2="154.28869"
+       y2="103.75355"
+       gradientTransform="matrix(0.97734059,0,0,1.2216758,-4.7731914,-34.309299)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         style="stop-color:#fff;stop-opacity:0.3"
+         id="stop4" />
+      <stop
+         offset="100%"
+         style="stop-color:#fff;stop-opacity:0"
+         id="stop5" />
+    </linearGradient>
+  </defs>
+  <!-- Slime trail with sparkles -->
+  <path
+     d="m 11.617308,145.9862 q 21.854,-7.6489 43.708,-2.1854 21.854,5.4635 43.708002,0 21.854,-5.4635 43.708,0 21.854,5.4635 32.781,5.4635"
+     fill="none"
+     stroke="#b8e6b8"
+     stroke-width="13.1124"
+     stroke-linecap="round"
+     opacity="0.5"
+     id="path5" />
+  <path
+     d="m 13.802708,145.9862 q 21.854,-6.5562 43.708,-1.0927 21.854,5.4635 43.708002,0 21.854,-5.4635 43.708,0"
+     fill="none"
+     stroke="#d4f4d4"
+     stroke-width="6.5562"
+     stroke-linecap="round"
+     opacity="0.7"
+     id="path6" />
+  <!-- Trail sparkles -->
+  <circle
+     cx="22.544308"
+     cy="143.8008"
+     r="1.63905"
+     fill="#7fb87f"
+     opacity="0.8"
+     id="circle6"
+     style="stroke-width:1.0927">
+    <animate
+       attributeName="opacity"
+       values="0.3;0.9;0.3"
+       dur="2s"
+       repeatCount="indefinite" />
+  </circle>
+  <circle
+     cx="71.715805"
+     cy="145.98619"
+     r="2.1854"
+     fill="#7fb87f"
+     opacity="0.6"
+     id="circle7"
+     style="stroke-width:1.0927">
+    <animate
+       attributeName="opacity"
+       values="0.4;1;0.4"
+       dur="2.5s"
+       repeatCount="indefinite" />
+  </circle>
+  <circle
+     cx="126.35081"
+     cy="147.0789"
+     r="1.63905"
+     fill="#7fb87f"
+     opacity="0.7"
+     id="circle8"
+     style="stroke-width:1.0927">
+    <animate
+       attributeName="opacity"
+       values="0.2;0.8;0.2"
+       dur="3s"
+       repeatCount="indefinite" />
+  </circle>
+  <!-- Snail body with gradient -->
+  <ellipse
+     cx="88.1063"
+     cy="124.1322"
+     rx="54.634998"
+     ry="21.854"
+     fill="#8b6f47"
+     id="ellipse8"
+     style="stroke-width:1.0927" />
+  <ellipse
+     cx="88.1063"
+     cy="121.94678"
+     rx="52.4496"
+     ry="19.6686"
+     fill="#a0826d"
+     opacity="0.6"
+     id="ellipse9"
+     style="stroke-width:1.0927" />
+  <!-- Body shine -->
+  <ellipse
+     cx="71.715805"
+     cy="118.66869"
+     rx="16.390499"
+     ry="8.7416"
+     fill="#ffffff"
+     opacity="0.2"
+     id="ellipse10"
+     style="stroke-width:1.0927" />
+  <!-- Snail head -->
+  <ellipse
+     cx="44.398312"
+     cy="118.66869"
+     rx="24.0394"
+     ry="27.317499"
+     fill="#a0826d"
+     id="ellipse11"
+     style="stroke-width:1.0927" />
+  <ellipse
+     cx="41.120213"
+     cy="115.3906"
+     rx="19.6686"
+     ry="21.854"
+     fill="#b89a7d"
+     opacity="0.4"
+     id="ellipse12"
+     style="stroke-width:1.0927" />
+  <!-- Eye stalks with slight curve -->
+  <path
+     d="m 41.120208,105.5563 q -2.1854,-10.927 -4.3708,-19.6686"
+     stroke="#8b6f47"
+     stroke-width="4.3708"
+     fill="none"
+     stroke-linecap="round"
+     id="path12" />
+  <path
+     d="m 49.861808,105.5563 q 2.1854,-10.927 4.3708,-19.6686"
+     stroke="#8b6f47"
+     stroke-width="4.3708"
+     fill="none"
+     stroke-linecap="round"
+     id="path13" />
+  <!-- Eyes with life -->
+  <circle
+     cx="36.749413"
+     cy="83.702301"
+     r="6.5562"
+     fill="#2c2416"
+     id="circle13"
+     style="stroke-width:1.0927" />
+  <circle
+     cx="54.232613"
+     cy="83.702301"
+     r="6.5562"
+     fill="#2c2416"
+     id="circle14"
+     style="stroke-width:1.0927" />
+  <circle
+     cx="38.934811"
+     cy="81.516907"
+     r="2.73175"
+     fill="#ffffff"
+     id="circle15"
+     style="stroke-width:1.0927" />
+  <circle
+     cx="56.418011"
+     cy="81.516907"
+     r="2.73175"
+     fill="#ffffff"
+     id="circle16"
+     style="stroke-width:1.0927" />
+  <circle
+     cx="35.656712"
+     cy="84.795006"
+     r="1.0927"
+     fill="#ffffff"
+     opacity="0.6"
+     id="circle17"
+     style="stroke-width:1.0927" />
+  <circle
+     cx="53.139912"
+     cy="84.795006"
+     r="1.0927"
+     fill="#ffffff"
+     opacity="0.6"
+     id="circle18"
+     style="stroke-width:1.0927" />
+  <!-- Happy enthusiastic smile -->
+  <path
+     d="m 34.564008,127.4103 q 10.927,6.5562 21.854,0"
+     fill="none"
+     stroke="#6b5439"
+     stroke-width="2.73175"
+     stroke-linecap="round"
+     id="path18" />
+  <!-- Little blush marks -->
+  <ellipse
+     cx="30.193209"
+     cy="124.1322"
+     rx="4.3708"
+     ry="3.2781"
+     fill="#d4826d"
+     opacity="0.4"
+     id="ellipse18"
+     style="stroke-width:1.0927" />
+  <ellipse
+     cx="58.603413"
+     cy="124.1322"
+     rx="4.3708"
+     ry="3.2781"
+     fill="#d4826d"
+     opacity="0.4"
+     id="ellipse19"
+     style="stroke-width:1.0927" />
+  <!-- Shell with beautiful spiral and depth -->
+  <circle
+     cx="115.42382"
+     cy="91.351204"
+     r="54.634998"
+     fill="url(#shellGrad)"
+     id="circle19"
+     style="fill:url(#shellGrad);stroke-width:1.0927" />
+  <!-- Spiral grooves for depth -->
+  <circle
+     cx="115.42382"
+     cy="91.351204"
+     r="48.0788"
+     fill="none"
+     stroke="#5d3a1a"
+     stroke-width="1.63905"
+     opacity="0.3"
+     id="circle20" />
+  <circle
+     cx="115.42382"
+     cy="91.351204"
+     r="39.3372"
+     fill="none"
+     stroke="#5d3a1a"
+     stroke-width="1.63905"
+     opacity="0.3"
+     id="circle21" />
+  <circle
+     cx="115.42382"
+     cy="91.351204"
+     r="30.5956"
+     fill="none"
+     stroke="#5d3a1a"
+     stroke-width="1.63905"
+     opacity="0.3"
+     id="circle22" />
+  <circle
+     cx="115.42382"
+     cy="91.351204"
+     r="21.854"
+     fill="none"
+     stroke="#5d3a1a"
+     stroke-width="1.63905"
+     opacity="0.3"
+     id="circle23" />
+  <circle
+     cx="115.42382"
+     cy="91.351204"
+     r="13.1124"
+     fill="none"
+     stroke="#5d3a1a"
+     stroke-width="1.63905"
+     opacity="0.3"
+     id="circle24" />
+  <!-- Spiral line for detail -->
+  <path
+     d="m 115.42381,91.3512 q 5.4635,-10.927 16.3905,-16.3905 16.3905,0 25.1321,16.3905 2.1854,21.854 -14.2051,36.0591 -27.3175,7.6489 -49.1715,-3.2781"
+     fill="none"
+     stroke="#4d2a0a"
+     stroke-width="2.1854"
+     opacity="0.4"
+     id="path24" />
+  <!-- Shell highlights and shimmer -->
+  <ellipse
+     cx="128.53621"
+     cy="70.589905"
+     rx="17.4832"
+     ry="21.854"
+     fill="url(#shimmer)"
+     id="ellipse24"
+     style="fill:url(#shimmer);stroke-width:1.0927" />
+  <ellipse
+     cx="135.09241"
+     cy="80.424202"
+     rx="8.7416"
+     ry="10.927"
+     fill="#ffffff"
+     opacity="0.25"
+     id="ellipse25"
+     style="stroke-width:1.0927" />
+  <!-- Debug elements with more character -->
+  <g
+     opacity="0.8"
+     id="g29"
+     transform="matrix(1.0927,0,0,1.0927,-4.7731915,-34.309299)">
+    <!-- Floating code bits -->
+    <text
+       x="148"
+       y="118"
+       font-family="'Courier New', monospace"
+       font-size="16px"
+       fill="#4a7c59"
+       font-weight="bold"
+       id="text25">01</text>
+    <text
+       x="168"
+       y="130"
+       font-family="'Courier New', monospace"
+       font-size="12px"
+       fill="#5d8f6a"
+       id="text26">10</text>
+    <text
+       x="152"
+       y="140"
+       font-family="'Courier New', monospace"
+       font-size="10px"
+       fill="#4a7c59"
+       opacity="0.7"
+       id="text27">11</text>
+    <!-- Progress dots -->
+    <circle
+       cx="175"
+       cy="112"
+       r="2.5"
+       fill="#4a7c59"
+       id="circle27" />
+    <circle
+       cx="183"
+       cy="118"
+       r="2.5"
+       fill="#5d8f6a"
+       id="circle28" />
+    <circle
+       cx="178"
+       cy="126"
+       r="2"
+       fill="#4a7c59"
+       opacity="0.7"
+       id="circle29" />
+    <!-- Little heart (love this project!) -->
+    <!-- <path d="M 188 108 C 188 106, 190 104, 192 104 C 194 104, 195 106, 195 107 C 195 106, 196 104, 198 104 C 200 104, 202 106, 202 108 C 202 111, 195 115, 195 115 C 195 115, 188 111, 188 108 Z" 
+          fill="#d4826d" opacity="0.6">
+      <animate attributeName="opacity" values="0.4;0.8;0.4" dur="1.5s" repeatCount="indefinite"/> -->
+  </g>
+</svg>
