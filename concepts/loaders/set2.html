@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium SVG Loaders</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #0c0e1a, #1a1d2e);
+            color: #e2e8f0;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+
+        .loaders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .loader-card {
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .loader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .loader-title {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #f1f5f9;
+            text-align: center;
+        }
+
+        .loader-container {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .loader-description {
+            color: #94a3b8;
+            text-align: center;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Premium SVG Loaders</h1>
+        <p class="subtitle">10 unique loaders with glass, aqua-blue, cyber-cyan, and electric themes</p>
+
+        <div class="loaders-grid">
+            <!-- Glass Morphism Orb -->
+            <div class="loader-card">
+                <h3 class="loader-title">Glass Morphism Orb</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="glassGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="rgba(255,255,255,0.2)" />
+                                <stop offset="50%" stop-color="rgba(255,255,255,0.1)" />
+                                <stop offset="100%" stop-color="rgba(255,255,255,0.05)" />
+                            </linearGradient>
+                            <filter id="glassBlur" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <circle cx="60" cy="60" r="40" fill="url(#glassGrad)" opacity="0.9" filter="url(#glassBlur)"
+                                stroke="rgba(255,255,255,0.3)" stroke-width="1">
+                                <animate attributeName="r" values="35;45;35" dur="3s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="45" cy="45" r="15" fill="rgba(255,255,255,0.4)" opacity="0.7">
+                                <animate attributeName="cx" values="45;50;45" dur="2s" repeatCount="indefinite" />
+                                <animate attributeName="cy" values="45;50;45" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">A translucent glass orb with subtle light reflections and morphing shape.
+                </p>
+            </div>
+
+            <!-- Aqua Blue Fluid -->
+            <div class="loader-card">
+                <h3 class="loader-title">Aqua Blue Fluid</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="aquaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#22d3ee" />
+                                <stop offset="50%" stop-color="#06b6d4" />
+                                <stop offset="100%" stop-color="#0891b2" />
+                            </linearGradient>
+                        </defs>
+                        <g>
+                            <path d="M30,60 Q45,40 60,60 T90,60" fill="none" stroke="url(#aquaGrad)" stroke-width="4"
+                                stroke-linecap="round">
+                                <animate attributeName="d"
+                                    values="M30,60 Q45,40 60,60 T90,60; M30,60 Q45,80 60,60 T90,60; M30,60 Q45,40 60,60 T90,60"
+                                    dur="2s" repeatCount="indefinite" />
+                            </path>
+                            <path d="M30,70 Q45,50 60,70 T90,70" fill="none" stroke="url(#aquaGrad)" stroke-width="4"
+                                stroke-linecap="round" opacity="0.7">
+                                <animate attributeName="d"
+                                    values="M30,70 Q45,50 60,70 T90,70; M30,70 Q45,90 60,70 T90,70; M30,70 Q45,50 60,70 T90,70"
+                                    dur="2s" repeatCount="indefinite" begin="0.2s" />
+                            </path>
+                            <path d="M30,80 Q45,60 60,80 T90,80" fill="none" stroke="url(#aquaGrad)" stroke-width="4"
+                                stroke-linecap="round" opacity="0.5">
+                                <animate attributeName="d"
+                                    values="M30,80 Q45,60 60,80 T90,80; M30,80 Q45,100 60,80 T90,80; M30,80 Q45,60 60,80 T90,80"
+                                    dur="2s" repeatCount="indefinite" begin="0.4s" />
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Fluid aqua waves with smooth, liquid motion and depth.</p>
+            </div>
+
+            <!-- Cyber Cyan Matrix -->
+            <div class="loader-card">
+                <h3 class="loader-title">Cyber Cyan Matrix</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#00f5d4" />
+                                <stop offset="100%" stop-color="#00b4d8" />
+                            </linearGradient>
+                            <filter id="cyberGlow" x="-20%" y="-20%" width="140%" height="140%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <rect x="30" y="30" width="60" height="60" fill="none" stroke="url(#cyberGrad)"
+                                stroke-width="2" stroke-dasharray="5, 5" filter="url(#cyberGlow)">
+                                <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60"
+                                    dur="4s" repeatCount="indefinite" />
+                            </rect>
+                            <rect x="40" y="40" width="40" height="40" fill="none" stroke="url(#cyberGrad)"
+                                stroke-width="2" stroke-dasharray="3, 3" filter="url(#cyberGlow)">
+                                <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60"
+                                    dur="3s" repeatCount="indefinite" />
+                            </rect>
+                            <rect x="50" y="50" width="20" height="20" fill="none" stroke="url(#cyberGrad)"
+                                stroke-width="2" stroke-dasharray="2, 2" filter="url(#cyberGlow)">
+                                <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60"
+                                    dur="2s" repeatCount="indefinite" />
+                            </rect>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Cyber-inspired matrix with rotating squares and neon cyan glow.</p>
+            </div>
+
+            <!-- Bloodstream Flow -->
+            <div class="loader-card">
+                <h3 class="loader-title">Bloodstream Flow</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="bloodGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#dc2626" />
+                                <stop offset="50%" stop-color="#b91c1c" />
+                                <stop offset="100%" stop-color="#991b1b" />
+                            </linearGradient>
+                        </defs>
+                        <g>
+                            <path d="M20,60 Q40,40 60,60 Q80,80 100,60" fill="none" stroke="url(#bloodGrad)"
+                                stroke-width="4" stroke-linecap="round">
+                                <animate attributeName="d"
+                                    values="M20,60 Q40,40 60,60 Q80,80 100,60; M20,60 Q40,80 60,60 Q80,40 100,60; M20,60 Q40,40 60,60 Q80,80 100,60"
+                                    dur="2.5s" repeatCount="indefinite" />
+                            </path>
+                            <circle cx="20" cy="60" r="3" fill="url(#bloodGrad)">
+                                <animate attributeName="cx" values="20;100;20" dur="2.5s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="60" cy="60" r="3" fill="url(#bloodGrad)">
+                                <animate attributeName="cx" values="60;100;60" dur="2.5s" repeatCount="indefinite"
+                                    begin="0.5s" />
+                            </circle>
+                            <circle cx="40" cy="60" r="3" fill="url(#bloodGrad)">
+                                <animate attributeName="cx" values="40;100;40" dur="2.5s" repeatCount="indefinite"
+                                    begin="1s" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Pulsating bloodstream flow with traveling corpuscles through veins.</p>
+            </div>
+
+            <!-- Electric Pulse -->
+            <div class="loader-card">
+                <h3 class="loader-title">Electric Pulse</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="electricGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#3b82f6" />
+                                <stop offset="50%" stop-color="#60a5fa" />
+                                <stop offset="100%" stop-color="#93c5fd" />
+                            </linearGradient>
+                            <filter id="electricGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="4" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <path d="M30,30 L45,45 L30,60 L45,75 L30,90" fill="none" stroke="url(#electricGrad)"
+                                stroke-width="3" stroke-linecap="round" filter="url(#electricGlow)">
+                                <animate attributeName="d"
+                                    values="M30,30 L45,45 L30,60 L45,75 L30,90; M30,20 L50,40 L30,60 L50,80 L30,100; M30,30 L45,45 L30,60 L45,75 L30,90"
+                                    dur="1.5s" repeatCount="indefinite" />
+                            </path>
+                            <path d="M60,30 L75,45 L60,60 L75,75 L60,90" fill="none" stroke="url(#electricGrad)"
+                                stroke-width="3" stroke-linecap="round" filter="url(#electricGlow)">
+                                <animate attributeName="d"
+                                    values="M60,30 L75,45 L60,60 L75,75 L60,90; M60,20 L80,40 L60,60 L80,80 L60,100; M60,30 L75,45 L60,60 L75,75 L60,90"
+                                    dur="1.5s" repeatCount="indefinite" begin="0.3s" />
+                            </path>
+                            <path d="M90,30 L105,45 L90,60 L105,75 L90,90" fill="none" stroke="url(#electricGrad)"
+                                stroke-width="3" stroke-linecap="round" filter="url(#electricGlow)">
+                                <animate attributeName="d"
+                                    values="M90,30 L105,45 L90,60 L105,75 L90,90; M90,20 L110,40 L90,60 L110,80 L90,100; M90,30 L105,45 L90,60 L105,75 L90,90"
+                                    dur="1.5s" repeatCount="indefinite" begin="0.6s" />
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Electric pulses with jagged lightning patterns and intense glow.</p>
+            </div>
+
+            <!-- Spark Burst -->
+            <div class="loader-card">
+                <h3 class="loader-title">Spark Burst</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#fbbf24" />
+                                <stop offset="50%" stop-color="#f59e0b" />
+                                <stop offset="100%" stop-color="#d97706" />
+                            </linearGradient>
+                            <filter id="sparkGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <!-- Central spark -->
+                            <circle cx="60" cy="60" r="8" fill="url(#sparkGrad)" filter="url(#sparkGlow)">
+                                <animate attributeName="r" values="6;12;6" dur="1s" repeatCount="indefinite" />
+                            </circle>
+
+                            <!-- Outer sparks -->
+                            <g>
+                                <circle cx="40" cy="40" r="3" fill="url(#sparkGrad)" filter="url(#sparkGlow)">
+                                    <animate attributeName="r" values="2;5;2" dur="1s" repeatCount="indefinite" />
+                                    <animate attributeName="cx" values="40;45;40" dur="1.5s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="40;45;40" dur="1.5s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="80" cy="40" r="3" fill="url(#sparkGrad)" filter="url(#sparkGlow)">
+                                    <animate attributeName="r" values="2;5;2" dur="1s" repeatCount="indefinite"
+                                        begin="0.2s" />
+                                    <animate attributeName="cx" values="80;75;80" dur="1.5s" repeatCount="indefinite"
+                                        begin="0.2s" />
+                                    <animate attributeName="cy" values="40;45;40" dur="1.5s" repeatCount="indefinite"
+                                        begin="0.2s" />
+                                </circle>
+                                <circle cx="40" cy="80" r="3" fill="url(#sparkGrad)" filter="url(#sparkGlow)">
+                                    <animate attributeName="r" values="2;5;2" dur="1s" repeatCount="indefinite"
+                                        begin="0.4s" />
+                                    <animate attributeName="cx" values="40;45;40" dur="1.5s" repeatCount="indefinite"
+                                        begin="0.4s" />
+                                    <animate attributeName="cy" values="80;75;80" dur="1.5s" repeatCount="indefinite"
+                                        begin="0.4s" />
+                                </circle>
+                                <circle cx="80" cy="80" r="3" fill="url(#sparkGrad)" filter="url(#sparkGlow)">
+                                    <animate attributeName="r" values="2;5;2" dur="1s" repeatCount="indefinite"
+                                        begin="0.6s" />
+                                    <animate attributeName="cx" values="80;75;80" dur="1.5s" repeatCount="indefinite"
+                                        begin="0.6s" />
+                                    <animate attributeName="cy" values="80;75;80" dur="1.5s" repeatCount="indefinite"
+                                        begin="0.6s" />
+                                </circle>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Bursting sparks with glowing particles moving outward from center.</p>
+            </div>
+
+            <!-- Neon Wave -->
+            <div class="loader-card">
+                <h3 class="loader-title">Neon Wave</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="neonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#c026d3" />
+                                <stop offset="50%" stop-color="#a855f7" />
+                                <stop offset="100%" stop-color="#7c3aed" />
+                            </linearGradient>
+                            <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="4" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <path d="M20,60 Q40,30 60,60 Q80,90 100,60" fill="none" stroke="url(#neonGrad)"
+                                stroke-width="4" stroke-linecap="round" filter="url(#neonGlow)">
+                                <animate attributeName="d"
+                                    values="M20,60 Q40,30 60,60 Q80,90 100,60; M20,60 Q40,90 60,60 Q80,30 100,60; M20,60 Q40,30 60,60 Q80,90 100,60"
+                                    dur="2s" repeatCount="indefinite" />
+                            </path>
+                            <circle cx="20" cy="60" r="3" fill="url(#neonGrad)" filter="url(#neonGlow)">
+                                <animate attributeName="cx" values="20;100;20" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="100" cy="60" r="3" fill="url(#neonGrad)" filter="url(#neonGlow)">
+                                <animate attributeName="cx" values="100;20;100" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Neon wave with intense purple glow and traveling light points.</p>
+            </div>
+
+            <!-- Frost Crystal -->
+            <div class="loader-card">
+                <h3 class="loader-title">Frost Crystal</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="frostGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#e0f2fe" />
+                                <stop offset="50%" stop-color="#bae6fd" />
+                                <stop offset="100%" stop-color="#7dd3fc" />
+                            </linearGradient>
+                        </defs>
+                        <g>
+                            <polygon points="60,20 70,40 90,40 75,55 85,75 60,65 35,75 45,55 30,40 50,40" fill="none"
+                                stroke="url(#frostGrad)" stroke-width="2" stroke-linejoin="round">
+                                <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60"
+                                    dur="6s" repeatCount="indefinite" />
+                            </polygon>
+                            <polygon points="60,30 65,40 75,40 70,50 75,60 60,55 45,60 50,50 45,40 55,40" fill="none"
+                                stroke="url(#frostGrad)" stroke-width="1" stroke-linejoin="round">
+                                <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60"
+                                    dur="4s" repeatCount="indefinite" />
+                            </polygon>
+                            <circle cx="60" cy="60" r="3" fill="url(#frostGrad)">
+                                <animate attributeName="r" values="2;4;2" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Rotating frost crystal with delicate icy patterns and subtle glow.</p>
+            </div>
+
+            <!-- Liquid Mercury -->
+            <div class="loader-card">
+                <h3 class="loader-title">Liquid Mercury</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="mercuryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#94a3b8" />
+                                <stop offset="50%" stop-color="#64748b" />
+                                <stop offset="100%" stop-color="#475569" />
+                            </linearGradient>
+                        </defs>
+                        <g>
+                            <ellipse cx="60" cy="60" rx="35" ry="15" fill="url(#mercuryGrad)" opacity="0.8">
+                                <animate attributeName="rx" values="30;40;30" dur="3s" repeatCount="indefinite" />
+                                <animate attributeName="ry" values="12;18;12" dur="3s" repeatCount="indefinite" />
+                            </ellipse>
+                            <ellipse cx="60" cy="60" rx="25" ry="10" fill="url(#mercuryGrad)" opacity="0.9">
+                                <animate attributeName="rx" values="20;30;20" dur="2.5s" repeatCount="indefinite" />
+                                <animate attributeName="ry" values="8;12;8" dur="2.5s" repeatCount="indefinite" />
+                            </ellipse>
+                            <ellipse cx="60" cy="60" rx="15" ry="8" fill="url(#mercuryGrad)" opacity="1">
+                                <animate attributeName="rx" values="10;20;10" dur="2s" repeatCount="indefinite" />
+                                <animate attributeName="ry" values="5;10;5" dur="2s" repeatCount="indefinite" />
+                            </ellipse>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Liquid mercury with pulsating ellipses and metallic sheen.</p>
+            </div>
+
+            <!-- Cosmic Dust -->
+            <div class="loader-card">
+                <h3 class="loader-title">Cosmic Dust</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="cosmicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#c084fc" />
+                                <stop offset="50%" stop-color="#a855f7" />
+                                <stop offset="100%" stop-color="#9333ea" />
+                            </linearGradient>
+                            <filter id="cosmicGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <!-- Dust particles -->
+                            <g>
+                                <circle cx="30" cy="30" r="2" fill="url(#cosmicGrad)" filter="url(#cosmicGlow)">
+                                    <animate attributeName="cx" values="30;40;30" dur="3s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="30;20;30" dur="3s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="90" cy="40" r="1.5" fill="url(#cosmicGrad)" filter="url(#cosmicGlow)">
+                                    <animate attributeName="cx" values="90;80;90" dur="4s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="40;50;40" dur="4s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="50" cy="80" r="2" fill="url(#cosmicGrad)" filter="url(#cosmicGlow)">
+                                    <animate attributeName="cx" values="50;60;50" dur="3.5s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="80;70;80" dur="3.5s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="70" cy="20" r="1.5" fill="url(#cosmicGrad)" filter="url(#cosmicGlow)">
+                                    <animate attributeName="cx" values="70;60;70" dur="2.5s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="20;30;20" dur="2.5s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="40" cy="50" r="2" fill="url(#cosmicGrad)" filter="url(#cosmicGlow)">
+                                    <animate attributeName="cx" values="40;50;40" dur="3s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="50;40;50" dur="3s" repeatCount="indefinite" />
+                                </circle>
+                            </g>
+
+                            <!-- Central nebula -->
+                            <circle cx="60" cy="60" r="15" fill="url(#cosmicGrad)" opacity="0.5"
+                                filter="url(#cosmicGlow)">
+                                <animate attributeName="r" values="12;18;12" dur="4s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Cosmic dust particles swirling around a glowing nebula center.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

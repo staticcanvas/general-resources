@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Spinners Collection</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e6e6e6;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #00dbde, #fc00ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+            color: #a0a0a0;
+        }
+
+        .spinners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .spinner-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-height: 280px;
+        }
+
+        .spinner-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .spinner-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #f0f0f0;
+        }
+
+        /* Spinner 1: Quantum Orbit */
+        .quantum-orbit {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .quantum-orbit::before,
+        .quantum-orbit::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #00dbde;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .quantum-orbit::before {
+            width: 100%;
+            height: 100%;
+            border-top-color: #00dbde;
+            border-bottom-color: #fc00ff;
+        }
+
+        .quantum-orbit::after {
+            top: 10px;
+            left: 10px;
+            width: 60px;
+            height: 60px;
+            border-top-color: #fc00ff;
+            border-bottom-color: #00dbde;
+            animation-direction: reverse;
+        }
+
+        /* Spinner 2: Pulsar Rings */
+        .pulsar-rings {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .pulsar-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid #ff0080;
+            opacity: 0;
+            animation: pulsar 2s linear infinite;
+        }
+
+        .pulsar-ring:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .pulsar-ring:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        /* Spinner 3: Morphing Blob */
+        .morphing-blob {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(45deg, #00dbde, #fc00ff);
+            border-radius: 50%;
+            animation: morph 3s ease-in-out infinite;
+        }
+
+        /* Spinner 4: Infinity Loop */
+        .infinity-loop {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .infinity-loop::before,
+        .infinity-loop::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #00ffcc;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .infinity-loop::after {
+            border-top-color: #ff3366;
+            animation-delay: 0.5s;
+        }
+
+        /* Spinner 5: Neon Bars */
+        .neon-bars {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .neon-bar {
+            width: 8px;
+            height: 40px;
+            background: linear-gradient(to top, #00dbde, #fc00ff);
+            border-radius: 4px;
+            animation: neon-bounce 1.2s ease-in-out infinite;
+        }
+
+        .neon-bar:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .neon-bar:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .neon-bar:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .neon-bar:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        /* Spinner 6: Cosmic Vortex */
+        .cosmic-vortex {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .cosmic-vortex::before,
+        .cosmic-vortex::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            border-top-color: #ff0080;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .cosmic-vortex::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .cosmic-vortex::after {
+            top: 15px;
+            left: 15px;
+            width: 50px;
+            height: 50px;
+            border-top-color: #00dbde;
+            animation-direction: reverse;
+        }
+
+        /* Spinner 7: Glowing Orbs */
+        .glowing-orbs {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .glowing-orb {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: #00ffcc;
+            box-shadow: 0 0 20px #00ffcc;
+            animation: orbit 2s linear infinite;
+        }
+
+        .glowing-orb:nth-child(2) {
+            background: #ff3366;
+            box-shadow: 0 0 20px #ff3366;
+            animation-delay: 0.5s;
+        }
+
+        .glowing-orb:nth-child(3) {
+            background: #ffcc00;
+            box-shadow: 0 0 20px #ffcc00;
+            animation-delay: 1s;
+        }
+
+        /* Spinner 8: Liquid Mercury */
+        .liquid-mercury {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .liquid-mercury::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #00dbde, #fc00ff);
+            border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+            animation: liquid 4s ease-in-out infinite;
+        }
+
+        /* Spinner 9: Digital Wave */
+        .digital-wave {
+            width: 80px;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+
+        .digital-bar {
+            width: 10px;
+            background: linear-gradient(to top, #00dbde, #fc00ff);
+            border-radius: 5px;
+            animation: digital 1.5s ease-in-out infinite;
+        }
+
+        .digital-bar:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .digital-bar:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .digital-bar:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+
+        .digital-bar:nth-child(5) {
+            animation-delay: 0.4s;
+        }
+
+        /* Spinner 10: Atomic Rings */
+        .atomic-rings {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .atomic-ring {
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid;
+            border-color: transparent #00ffcc transparent #ff3366;
+            animation: spin 2s linear infinite;
+        }
+
+        .atomic-ring:nth-child(1) {
+            width: 100%;
+            height: 100%;
+        }
+
+        .atomic-ring:nth-child(2) {
+            width: 70%;
+            height: 70%;
+            top: 15%;
+            left: 15%;
+            animation-direction: reverse;
+        }
+
+        .atomic-ring:nth-child(3) {
+            width: 40%;
+            height: 40%;
+            top: 30%;
+            left: 30%;
+        }
+
+        /* Animations */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulsar {
+            0% {
+                transform: scale(0.1);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 0;
+            }
+        }
+
+        @keyframes morph {
+
+            0%,
+            100% {
+                border-radius: 50%;
+                transform: scale(1) rotate(0deg);
+            }
+
+            25% {
+                border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+                transform: scale(1.1) rotate(90deg);
+            }
+
+            50% {
+                border-radius: 60% 40% 30% 70% / 40% 50% 60% 50%;
+                transform: scale(1) rotate(180deg);
+            }
+
+            75% {
+                border-radius: 30% 70% 70% 30% / 50% 60% 40% 50%;
+                transform: scale(1.1) rotate(270deg);
+            }
+        }
+
+        @keyframes neon-bounce {
+
+            0%,
+            100% {
+                transform: scaleY(0.5);
+            }
+
+            50% {
+                transform: scaleY(1.5);
+            }
+        }
+
+        @keyframes orbit {
+            0% {
+                transform: rotate(0deg) translateX(30px) rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg) translateX(30px) rotate(-360deg);
+            }
+        }
+
+        @keyframes liquid {
+
+            0%,
+            100% {
+                border-radius: 40% 60% 60% 40% / 60% 30% 70% 40%;
+                transform: rotate(0deg);
+            }
+
+            25% {
+                border-radius: 60% 40% 30% 70% / 40% 50% 60% 50%;
+                transform: rotate(90deg);
+            }
+
+            50% {
+                border-radius: 30% 70% 70% 30% / 50% 60% 40% 50%;
+                transform: rotate(180deg);
+            }
+
+            75% {
+                border-radius: 70% 30% 50% 50% / 30% 70% 60% 70%;
+                transform: rotate(270deg);
+            }
+        }
+
+        @keyframes digital {
+
+            0%,
+            100% {
+                height: 20px;
+            }
+
+            50% {
+                height: 60px;
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .spinners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .spinners-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Premium Spinners Collection</h1>
+        <p class="subtitle">10 unique and visually appealing loading animations for your projects</p>
+
+        <div class="spinners-grid">
+            <!-- Spinner 1 -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Quantum Orbit</h3>
+                <div class="quantum-orbit"></div>
+            </div>
+
+            <!-- Spinner 2 -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Pulsar Rings</h3>
+                <div class="pulsar-rings">
+                    <div class="pulsar-ring"></div>
+                    <div class="pulsar-ring"></div>
+                    <div class="pulsar-ring"></div>
+                </div>
+            </div>
+
+            <!-- Spinner 3 -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Morphing Blob</h3>
+                <div class="morphing-blob"></div>
+            </div>
+
+            <!-- Spinner 4 -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Infinity Loop</h3>
+                <div class="infinity-loop"></div>
+            </div>
+
+            <!-- Spinner 5 -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Neon Bars</h3>
+                <div class="neon-bars">
+                    <div class="neon-bar"></div>
+                    <div class="neon-bar"></div>
+                    <div class="neon-bar"></div>
+                    <div class="neon-bar"></div>
+                    <div class="neon-bar"></div>
+                </div>
+            </div>
+
+            <!-- Spinner 6 -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Cosmic Vortex</h3>
+                <div class="cosmic-vortex"></div>
+            </div>
+
+            <!-- Spinner 7 -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Glowing Orbs</h3>
+                <div class="glowing-orbs">
+                    <div class="glowing-orb"></div>
+                    <div class="glowing-orb"></div>
+                    <div class="glowing-orb"></div>
+                </div>
+            </div>
+
+            <!-- Spinner 8 -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Liquid Mercury</h3>
+                <div class="liquid-mercury"></div>
+            </div>
+
+            <!-- Spinner 9 -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Digital Wave</h3>
+                <div class="digital-wave">
+                    <div class="digital-bar" style="height: 30px;"></div>
+                    <div class="digital-bar" style="height: 40px;"></div>
+                    <div class="digital-bar" style="height: 50px;"></div>
+                    <div class="digital-bar" style="height: 40px;"></div>
+                    <div class="digital-bar" style="height: 30px;"></div>
+                </div>
+            </div>
+
+            <!-- Spinner 10 -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Atomic Rings</h3>
+                <div class="atomic-rings">
+                    <div class="atomic-ring"></div>
+                    <div class="atomic-ring"></div>
+                    <div class="atomic-ring"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

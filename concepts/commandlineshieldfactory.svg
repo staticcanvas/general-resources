@@ -1,0 +1,22 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- Terminal window -->
+  <rect x="40" y="40" width="120" height="120" rx="5" fill="#012456"/>
+  <rect x="40" y="40" width="120" height="25" fill="#1e3a5c"/>
+  
+  <!-- PowerShell prompt -->
+  <text x="50" y="58" font-family="Consolas, monospace" font-size="12" fill="white">PS > New-Shield</text>
+  
+  <!-- Generated shields flowing out -->
+  <rect x="60" y="80" width="40" height="20" fill="#e74c3c"/>
+  <rect x="105" y="80" width="25" height="20" fill="#27ae60"/>
+  <text x="80" y="92" text-anchor="middle" font-family="Arial" font-size="8" fill="white">build</text>
+  <text x="117" y="92" text-anchor="middle" font-family="Arial" font-size="8" fill="white">pass</text>
+  
+  <rect x="70" y="110" width="50" height="20" fill="#3498db"/>
+  <rect x="125" y="110" width="30" height="20" fill="#f39c12"/>
+  <text x="95" y="122" text-anchor="middle" font-family="Arial" font-size="8" fill="white">coverage</text>
+  <text x="140" y="122" text-anchor="middle" font-family="Arial" font-size="8" fill="white">90%</text>
+  
+  <!-- Arrow indicating generation -->
+  <polygon points="160,100 175,100 170,95 175,100 170,105" fill="#5391fe"/>
+</svg>

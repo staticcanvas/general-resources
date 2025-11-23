@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>10 Themed Dropdowns with Submenus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 60px;
+    }
+    
+    .menu {
+      width: 260px;
+      margin: 0 auto;
+      position: sticky;
+      top: 20px;
+    }
+    
+    .title {
+      width: 100%;
+      padding: 14px;
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 0 0 40px -10px #000;
+      font-weight: 500;
+      cursor: pointer;
+      user-select: none;
+    }
+    
+    .title span {
+      float: right;
+      font-size: 18px;
+      transition: transform 0.3s;
+    }
+    
+    .title.active span {
+      transform: rotate(90deg);
+    }
+    
+    .dropdown {
+      width: 100%;
+      border-radius: 4px;
+      box-shadow: 0 0 40px -10px #000;
+      margin-top: 24px;
+      max-height: 0;
+      overflow: hidden;
+    }
+    
+    .dropdown.down {
+      max-height: 500px;
+      overflow: visible;
+    }
+    
+    .arrow {
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      position: absolute;
+      right: 20px;
+      bottom: -24px;
+      display: none;
+    }
+    
+    .arrow.gone {
+      display: block;
+    }
+    
+    .dropdown > p {
+      padding: 15px 14px;
+      margin: 0;
+      transition: all 0.3s;
+      cursor: pointer;
+      position: relative;
+      user-select: none;
+    }
+    
+    .dropdown > p span {
+      float: right;
+    }
+    
+    .dropdown > p .fa-chevron-right {
+      transition: transform 0.3s;
+    }
+    
+    .dropdown > p.has-submenu.active .fa-chevron-right {
+      transform: rotate(90deg);
+    }
+    
+    /* Submenu styles */
+    .submenu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+      padding-left: 20px;
+    }
+    
+    .submenu.open {
+      max-height: 300px;
+    }
+    
+    .submenu p {
+      padding: 12px 14px;
+      margin: 0;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-size: 14px;
+      opacity: 0.9;
+    }
+    
+    .submenu p span {
+      float: right;
+      font-size: 14px;
+    }
+    
+    /* Theme 1: Coral Sunset (Original) */
+    .theme-1 { background: #ff7f50; }
+    .theme-1 .title,
+    .theme-1 .dropdown { background: #fff; color: #505050; }
+    .theme-1 .arrow { border-bottom: 10px solid #fff; }
+    .theme-1 .dropdown { transition: all 0.5s; }
+    .theme-1 .dropdown > p:hover,
+    .theme-1 .submenu p:hover {
+      background: coral;
+      transform: scale(1.05);
+      color: rgba(255,255,255,0.8);
+      box-shadow: 0 0 30px -10px #000;
+    }
+    .theme-1 .submenu { background: #fff; }
+    .theme-1 .submenu p { background: #fff8f5; }
+    
+    /* Theme 2: Ocean Deep */
+    .theme-2 { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+    .theme-2 .title,
+    .theme-2 .dropdown { background: rgba(255,255,255,0.95); color: #2c3e50; }
+    .theme-2 .arrow { border-bottom: 10px solid rgba(255,255,255,0.95); }
+    .theme-2 .dropdown { transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .theme-2 .dropdown > p:hover,
+    .theme-2 .submenu p:hover {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      transform: translateX(10px);
+      color: white;
+      border-radius: 4px;
+    }
+    .theme-2 .submenu { background: rgba(255,255,255,0.95); }
+    .theme-2 .submenu p { background: rgba(102, 126, 234, 0.1); }
+    
+    /* Theme 3: Neon Night */
+    .theme-3 { background: #1a1a2e; }
+    .theme-3 .title,
+    .theme-3 .dropdown { background: #16213e; color: #0ff; border: 2px solid #0ff; }
+    .theme-3 .arrow { border-bottom: 10px solid #0ff; }
+    .theme-3 .dropdown { transition: all 0.4s ease-out; }
+    .theme-3 .dropdown > p:hover,
+    .theme-3 .submenu p:hover {
+      background: #0ff;
+      color: #1a1a2e;
+      transform: skewX(-5deg);
+      box-shadow: 0 0 20px #0ff;
+    }
+    .theme-3 .submenu { background: #16213e; }
+    .theme-3 .submenu p { background: #0e1621; }
+    
+    /* Theme 4: Forest Green */
+    .theme-4 { background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%); }
+    .theme-4 .title,
+    .theme-4 .dropdown { background: #f0fff4; color: #2d3748; }
+    .theme-4 .arrow { border-bottom: 10px solid #f0fff4; }
+    .theme-4 .dropdown { transition: all 0.5s ease-in-out; }
+    .theme-4 .dropdown > p:hover,
+    .theme-4 .submenu p:hover {
+      background: linear-gradient(90deg, #11998e, #38ef7d);
+      color: white;
+      transform: scale(1.08) rotate(1deg);
+      border-left: 4px solid #38ef7d;
+    }
+    .theme-4 .submenu { background: #f0fff4; }
+    .theme-4 .submenu p { background: #e6f9ea; }
+    
+    /* Theme 5: Sunset Gradient */
+    .theme-5 { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+    .theme-5 .title,
+    .theme-5 .dropdown { background: #fff; color: #4a154b; }
+    .theme-5 .arrow { border-bottom: 10px solid #fff; }
+    .theme-5 .dropdown { transition: all 0.7s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+    .theme-5 .dropdown > p:hover,
+    .theme-5 .submenu p:hover {
+      background: linear-gradient(90deg, #f093fb, #f5576c);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 16px rgba(245, 87, 108, 0.3);
+    }
+    .theme-5 .submenu { background: #fff; }
+    .theme-5 .submenu p { background: #fff5f8; }
+    
+    /* Theme 6: Dark Mode */
+    .theme-6 { background: #0d0d0d; }
+    .theme-6 .title,
+    .theme-6 .dropdown { background: #1e1e1e; color: #e0e0e0; border: 1px solid #333; }
+    .theme-6 .arrow { border-bottom: 10px solid #1e1e1e; }
+    .theme-6 .dropdown { transition: all 0.4s; }
+    .theme-6 .dropdown > p:hover,
+    .theme-6 .submenu p:hover {
+      background: #2d2d2d;
+      color: #ffd700;
+      transform: translateX(8px);
+      border-left: 3px solid #ffd700;
+    }
+    .theme-6 .submenu { background: #1e1e1e; }
+    .theme-6 .submenu p { background: #171717; }
+    
+    /* Theme 7: Candy Pop */
+    .theme-7 { background: linear-gradient(135deg, #ff6b6b 0%, #feca57 100%); }
+    .theme-7 .title,
+    .theme-7 .dropdown { background: #fff; color: #ff6b6b; border-radius: 20px; }
+    .theme-7 .arrow { border-bottom: 10px solid #fff; }
+    .theme-7 .dropdown { transition: all 0.5s; }
+    .theme-7 .dropdown > p,
+    .theme-7 .submenu p {
+      border-radius: 15px;
+      margin: 5px;
+    }
+    .theme-7 .dropdown > p:hover,
+    .theme-7 .submenu p:hover {
+      background: linear-gradient(90deg, #ff6b6b, #feca57);
+      color: white;
+      transform: scale(1.1) rotate(-2deg);
+    }
+    .theme-7 .submenu { background: #fff; border-radius: 15px; }
+    .theme-7 .submenu p { background: #fff8f0; }
+    
+    /* Theme 8: Ice Blue */
+    .theme-8 { background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%); }
+    .theme-8 .title,
+    .theme-8 .dropdown { background: rgba(255,255,255,0.9); color: #2c5f2d; backdrop-filter: blur(10px); }
+    .theme-8 .arrow { border-bottom: 10px solid rgba(255,255,255,0.9); }
+    .theme-8 .dropdown { transition: all 0.6s ease-in-out; }
+    .theme-8 .dropdown > p:hover,
+    .theme-8 .submenu p:hover {
+      background: #96e6a1;
+      color: white;
+      transform: scale(1.05);
+      border-radius: 8px;
+      box-shadow: 0 5px 15px rgba(150, 230, 161, 0.4);
+    }
+    .theme-8 .submenu { background: rgba(255,255,255,0.9); }
+    .theme-8 .submenu p { background: rgba(212, 252, 121, 0.2); }
+    
+    /* Theme 9: Royal Purple */
+    .theme-9 { background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%); }
+    .theme-9 .title,
+    .theme-9 .dropdown { background: #f8f9fa; color: #4a00e0; }
+    .theme-9 .arrow { border-bottom: 10px solid #f8f9fa; }
+    .theme-9 .dropdown { transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+    .theme-9 .dropdown > p:hover,
+    .theme-9 .submenu p:hover {
+      background: linear-gradient(90deg, #8e2de2, #4a00e0);
+      color: white;
+      transform: perspective(500px) rotateX(5deg);
+      box-shadow: 0 10px 20px rgba(142, 45, 226, 0.3);
+    }
+    .theme-9 .submenu { background: #f8f9fa; }
+    .theme-9 .submenu p { background: #ede8f5; }
+    
+    /* Theme 10: Autumn */
+    .theme-10 { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+    .theme-10 .title,
+    .theme-10 .dropdown { background: #fff8e1; color: #d84315; }
+    .theme-10 .arrow { border-bottom: 10px solid #fff8e1; }
+    .theme-10 .dropdown { transition: all 0.6s; }
+    .theme-10 .dropdown > p:hover,
+    .theme-10 .submenu p:hover {
+      background: linear-gradient(90deg, #fa709a, #fee140);
+      color: white;
+      transform: scale(1.06) translateX(5px);
+      border-radius: 0 15px 15px 0;
+      box-shadow: -5px 0 15px rgba(250, 112, 154, 0.3);
+    }
+    .theme-10 .submenu { background: #fff8e1; }
+    .theme-10 .submenu p { background: #fff3c4; }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.8;
+    }
+    
+    .theme-1 h2 { color: #fff; }
+    .theme-2 h2 { color: #fff; }
+    .theme-3 h2 { color: #0ff; }
+    .theme-4 h2 { color: #fff; }
+    .theme-5 h2 { color: #fff; }
+    .theme-6 h2 { color: #e0e0e0; }
+    .theme-7 h2 { color: #fff; }
+    .theme-8 h2 { color: #2c5f2d; }
+    .theme-9 h2 { color: #fff; }
+    .theme-10 h2 { color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Theme 1: Coral Sunset -->
+    <div class="theme-1">
+      <h2>Coral Sunset</h2>
+      <div class="menu">
+        <div class="title" onclick="toggleDropdown(this)">
+          John Doe <span class="fa fa-bars"></span>
+          <div class="arrow"></div>
+        </div>
+        <div class="dropdown">
+          <p onclick="event.stopPropagation()">Inbox <span class="fa fa-inbox"></span></p>
+          <p class="has-submenu" onclick="toggleSubmenu(this)">
+            Settings <span class="fa fa-chevron-right"></span>
+          </p>
+          <div class="submenu">
+            <p>Profile <span class="fa fa-user"></span></p>
+            <p>Privacy <span class="fa fa-lock"></span></p>
+            <p>Security <span class="fa fa-shield"></span></p>
+          </div>
+          <p onclick="event.stopPropagation()">Sign Out <span class="fa fa-sign-out"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme 2: Ocean Deep -->
+    <div class="theme-2">
+      <h2>Ocean Deep</h2>
+      <div class="menu">
+        <div class="title" onclick="toggleDropdown(this)">
+          Jane Smith <span class="fa fa-bars"></span>
+          <div class="arrow"></div>
+        </div>
+        <div class="dropdown">
+          <p onclick="event.stopPropagation()">Messages <span class="fa fa-envelope"></span></p>
+          <p class="has-submenu" onclick="toggleSubmenu(this)">
+            Profile <span class="fa fa-chevron-right"></span>
+          </p>
+          <div class="submenu">
+            <p>Edit Info <span class="fa fa-pen"></span></p>
+            <p>View Stats <span class="fa fa-chart-bar"></span></p>
+            <p>Preferences <span class="fa fa-sliders"></span></p>
+          </div>
+          <p onclick="event.stopPropagation()">Logout <span class="fa fa-right-from-bracket"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme 3: Neon Night -->
+    <div class="theme-3">
+      <h2>Neon Night</h2>
+      <div class="menu">
+        <div class="title" onclick="toggleDropdown(this)">
+          Alex Tech <span class="fa fa-bars"></span>
+          <div class="arrow"></div>
+        </div>
+        <div class="dropdown">
+          <p onclick="event.stopPropagation()">Dashboard <span class="fa fa-chart-line"></span></p>
+          <p class="has-submenu" onclick="toggleSubmenu(this)">
+            Settings <span class="fa fa-chevron-right"></span>
+          </p>
+          <div class="submenu">
+            <p>Display <span class="fa fa-desktop"></span></p>
+            <p>Audio <span class="fa fa-volume-high"></span></p>
+            <p>Network <span class="fa fa-wifi"></span></p>
+          </div>
+          <p onclick="event.stopPropagation()">Exit <span class="fa fa-power-off"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme 4: Forest Green -->
+    <div class="theme-4">
+      <h2>Forest Green</h2>
+      <div class="menu">
+        <div class="title" onclick="toggleDropdown(this)">
+          Sam Forest <span class="fa fa-bars"></span>
+          <div class="arrow"></div>
+        </div>
+        <div class="dropdown">
+          <p onclick="event.stopPropagation()">Home <span class="fa fa-house"></span></p>
+          <p class="has-submenu" onclick="toggleSubmenu(this)">
+            Preferences <span class="fa fa-chevron-right"></span>
+          </p>
+          <div class="submenu">
+            <p>Theme <span class="fa fa-palette"></span></p>
+            <p>Language <span class="fa fa-language"></span></p>
+            <p>Notifications <span class="fa fa-bell"></span></p>
+          </div>
+          <p onclick="event.stopPropagation()">Sign Out <span class="fa fa-arrow-right-from-bracket"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme 5: Sunset Gradient -->
+    <div class="theme-5">
+      <h2>Sunset Gradient</h2>
+      <div class="menu">
+        <div class="title" onclick="toggleDropdown(this)">
+          Emma Rose <span class="fa fa-bars"></span>
+          <div class="arrow"></div>
+        </div>
+        <div class="dropdown">
+          <p onclick="event.stopPropagation()">Notifications <span class="fa fa-bell"></span></p>
+          <p class="has-submenu" onclick="toggleSubmenu(this)">
+            Account <span class="fa fa-chevron-right"></span>
+          </p>
+          <div class="submenu">
+            <p>Billing <span class="fa fa-credit-card"></span></p>
+            <p>Subscription <span class="fa fa-star"></span></p>
+            <p>History <span class="fa fa-clock-rotate-left"></span></p>
+          </div>
+          <p onclick="event.stopPropagation()">Logout <span class="fa fa-right-from-bracket"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme 6: Dark Mode -->
+    <div class="theme-6">
+      <h2>Dark Mode</h2>
+      <div class="menu">
+        <div class="title" onclick="toggleDropdown(this)">
+          Dark User <span class="fa fa-bars"></span>
+          <div class="arrow"></div>
+        </div>
+        <div class="dropdown">
+          <p onclick="event.stopPropagation()">Inbox <span class="fa fa-inbox"></span></p>
+          <p class="has-submenu" onclick="toggleSubmenu(this)">
+            Settings <span class="fa fa-chevron-right"></span>
+          </p>
+          <div class="submenu">
+            <p>General <span class="fa fa-gear"></span></p>
+            <p>Advanced <span class="fa fa-wrench"></span></p>
+            <p>Developer <span class="fa fa-code"></span></p>
+          </div>
+          <p onclick="event.stopPropagation()">Sign Out <span class="fa fa-sign-out"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme 7: Candy Pop -->
+    <div class="theme-7">
+      <h2>Candy Pop</h2>
+      <div class="menu">
+        <div class="title" onclick="toggleDropdown(this)">
+          Sweet User <span class="fa fa-bars"></span>
+          <div class="arrow"></div>
+        </div>
+        <div class="dropdown">
+          <p onclick="event.stopPropagation()">Feed <span class="fa fa-rss"></span></p>
+          <p class="has-submenu" onclick="toggleSubmenu(this)">
+            Profile <span class="fa fa-chevron-right"></span>
+          </p>
+          <div class="submenu">
+            <p>Photos <span class="fa fa-image"></span></p>
+            <p>Videos <span class="fa fa-video"></span></p>
+            <p>Bio <span class="fa fa-id-badge"></span></p>
+          </div>
+          <p onclick="event.stopPropagation()">Exit <span class="fa fa-door-open"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme 8: Ice Blue -->
+    <div class="theme-8">
+      <h2>Ice Blue</h2>
+      <div class="menu">
+        <div class="title" onclick="toggleDropdown(this)">
+          Cool User <span class="fa fa-bars"></span>
+          <div class="arrow"></div>
+        </div>
+        <div class="dropdown">
+          <p onclick="event.stopPropagation()">Activity <span class="fa fa-chart-simple"></span></p>
+          <p class="has-submenu" onclick="toggleSubmenu(this)">
+            Settings <span class="fa fa-chevron-right"></span>
+          </p>
+          <div class="submenu">
+            <p>Appearance <span class="fa fa-paintbrush"></span></p>
+            <p>Privacy <span class="fa fa-user-shield"></span></p>
+            <p>Data <span class="fa fa-database"></span></p>
+          </div>
+          <p onclick="event.stopPropagation()">Logout <span class="fa fa-right-from-bracket"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme 9: Royal Purple -->
+    <div class="theme-9">
+      <h2>Royal Purple</h2>
+      <div class="menu">
+        <div class="title" onclick="toggleDropdown(this)">
+          Royal User <span class="fa fa-bars"></span>
+          <div class="arrow"></div>
+        </div>
+        <div class="dropdown">
+          <p onclick="event.stopPropagation()">Dashboard <span class="fa fa-table-columns"></span></p>
+          <p class="has-submenu" onclick="toggleSubmenu(this)">
+            Options <span class="fa fa-chevron-right"></span>
+          </p>
+          <div class="submenu">
+            <p>Customize <span class="fa fa-wand-magic-sparkles"></span></p>
+            <p>Integrations <span class="fa fa-puzzle-piece"></span></p>
+            <p>API Keys <span class="fa fa-key"></span></p>
+          </div>
+          <p onclick="event.stopPropagation()">Sign Out <span class="fa fa-sign-out-alt"></span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme 10: Autumn -->
+    <div class="theme-10">
+      <h2>Autumn</h2>
+      <div class="menu">
+        <div class="title" onclick="toggleDropdown(this)">
+          Fall User <span class="fa fa-bars"></span>
+          <div class="arrow"></div>
+        </div>
+        <div class="dropdown">
+          <p onclick="event.stopPropagation()">Overview <span class="fa fa-eye"></span></p>
+          <p class="has-submenu" onclick="toggleSubmenu(this)">
+            Settings <span class="fa fa-chevron-right"></span>
+          </p>
+          <div class="submenu">
+            <p>Account <span class="fa fa-user-gear"></span></p>
+            <p>Timezone <span class="fa fa-clock"></span></p>
+            <p>Backup <span class="fa fa-floppy-disk"></span></p>
+          </div>
+          <p onclick="event.stopPropagation()">Logout <span class="fa fa-right-from-bracket"></span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleDropdown(element) {
+      const dropdown = element.nextElementSibling;
+      const arrow = element.querySelector('.arrow');
+      
+      dropdown.classList.toggle('down');
+      arrow.classList.toggle('gone');
+      element.classList.toggle('active');
+      
+      if (dropdown.classList.contains('down')) {
+        setTimeout(() => {
+          dropdown.style.overflow = 'visible';
+        }, 500);
+      } else {
+        dropdown.style.overflow = 'hidden';
+        // Close all submenus when closing main dropdown
+        const submenus = dropdown.querySelectorAll('.submenu');
+        const submenuParents = dropdown.querySelectorAll('.has-submenu');
+        submenus.forEach(sub => sub.classList.remove('open'));
+        submenuParents.forEach(parent => parent.classList.remove('active'));
+      }
+    }
+    
+    function toggleSubmenu(element) {
+      event.stopPropagation();
+      const submenu = element.nextElementSibling;
+      const wasOpen = submenu.classList.contains('open');
+      
+      // Close all other submenus in the same dropdown
+      const dropdown = element.closest('.dropdown');
+      const allSubmenus = dropdown.querySelectorAll('.submenu');
+      const allSubmenuParents = dropdown.querySelectorAll('.has-submenu');
+      
+      allSubmenus.forEach(sub => sub.classList.remove('open'));
+      allSubmenuParents.forEach(parent => parent.classList.remove('active'));
+      
+      // Toggle the clicked submenu
+      if (!wasOpen) {
+        submenu.classList.add('open');
+        element.classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html>

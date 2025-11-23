@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium SVG Spinners Collection - Fixed</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e6e6e6;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            background: linear-gradient(45deg, #00dbde, #fc00ff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            color: #a0a0a0;
+        }
+
+        .spinners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .spinner-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            min-height: 250px;
+        }
+
+        .spinner-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .spinner-title {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            text-align: center;
+            color: #f0f0f0;
+        }
+
+        .spinner-svg {
+            width: 80px;
+            height: 80px;
+        }
+
+        /* Fixed SVG Animation Styles */
+        .svg-rotate {
+            animation: svg-rotate 2s linear infinite;
+            transform-origin: center;
+        }
+
+        .svg-rotate-reverse {
+            animation: svg-rotate 1.5s linear infinite reverse;
+            transform-origin: center;
+        }
+
+        .pulse {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .dash {
+            animation: dash 1.5s ease-in-out infinite;
+        }
+
+        .bounce {
+            animation: bounce 1.5s ease-in-out infinite;
+        }
+
+        .morph {
+            animation: morph 3s ease-in-out infinite;
+        }
+
+        .orbit {
+            animation: orbit 2s linear infinite;
+            transform-origin: center;
+        }
+
+        .wave {
+            animation: wave 1.5s ease-in-out infinite;
+        }
+
+        .ripple {
+            animation: ripple 2s linear infinite;
+            transform-origin: center;
+        }
+
+        .spin-slow {
+            animation: svg-rotate 3s linear infinite;
+            transform-origin: center;
+        }
+
+        .spin-fast {
+            animation: svg-rotate 0.8s linear infinite;
+            transform-origin: center;
+        }
+
+        .color-shift {
+            animation: colorShift 3s ease-in-out infinite;
+        }
+
+        .gear-teeth {
+            animation: svg-rotate 2s linear infinite;
+            transform-origin: center;
+        }
+
+        .gear-inner {
+            animation: svg-rotate 1.5s linear infinite reverse;
+            transform-origin: center;
+        }
+
+        /* Keyframes */
+        @keyframes svg-rotate {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.7;
+            }
+        }
+
+        @keyframes dash {
+            0% {
+                stroke-dasharray: 1, 150;
+                stroke-dashoffset: 0;
+            }
+
+            50% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -35;
+            }
+
+            100% {
+                stroke-dasharray: 90, 150;
+                stroke-dashoffset: -124;
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes morph {
+
+            0%,
+            100% {
+                d: path("M40,20 C50,10 70,10 80,20 C90,30 90,50 80,60 C70,70 50,70 40,60 C30,50 30,30 40,20 Z");
+            }
+
+            25% {
+                d: path("M35,25 C45,15 75,15 75,25 C85,35 85,55 75,65 C65,75 45,75 35,65 C25,55 25,35 35,25 Z");
+            }
+
+            50% {
+                d: path("M30,30 C50,20 70,20 70,30 C80,40 80,60 70,70 C60,80 40,80 30,70 C20,60 20,40 30,30 Z");
+            }
+
+            75% {
+                d: path("M35,25 C55,15 65,15 75,25 C85,35 75,55 65,65 C55,75 45,75 35,65 C25,55 35,35 45,25 Z");
+            }
+        }
+
+        @keyframes wave {
+
+            0%,
+            100% {
+                transform: scaleY(0.5);
+            }
+
+            50% {
+                transform: scaleY(1.5);
+            }
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0.8);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(2);
+                opacity: 0;
+            }
+        }
+
+        @keyframes colorShift {
+            0% {
+                fill: #00dbde;
+            }
+
+            50% {
+                fill: #fc00ff;
+            }
+
+            100% {
+                fill: #00dbde;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .spinners-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Premium SVG Spinners Collection - Fixed</h1>
+        <p class="subtitle">Now with properly working rotating rings and gears</p>
+
+        <div class="spinners-grid">
+            <!-- Spinner 1: Fixed Rotating Rings -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Rotating Rings - Fixed</h3>
+                <svg class="spinner-svg" viewBox="0 0 100 100">
+                    <!-- Outer ring -->
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad1)" stroke-width="3"
+                        stroke-dasharray="50 100" class="svg-rotate" />
+                    <!-- Inner ring -->
+                    <circle cx="50" cy="50" r="35" fill="none" stroke="url(#grad2)" stroke-width="3"
+                        stroke-dasharray="30 100" class="svg-rotate-reverse" />
+                    <defs>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#00dbde" />
+                            <stop offset="100%" stop-color="#fc00ff" />
+                        </linearGradient>
+                        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#fc00ff" />
+                            <stop offset="100%" stop-color="#00dbde" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Spinner 2: Fixed Gear System -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Gear System - Fixed</h3>
+                <svg class="spinner-svg" viewBox="0 0 100 100">
+                    <!-- Outer gear -->
+                    <g class="gear-teeth">
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="#00dbde" stroke-width="8"
+                            stroke-dasharray="10,15" />
+                        <circle cx="50" cy="50" r="25" fill="none" stroke="#00dbde" stroke-width="3" />
+                    </g>
+                    <!-- Inner gear -->
+                    <g class="gear-inner">
+                        <circle cx="50" cy="50" r="20" fill="none" stroke="#fc00ff" stroke-width="6"
+                            stroke-dasharray="8,12" />
+                        <circle cx="50" cy="50" r="12" fill="none" stroke="#fc00ff" stroke-width="2" />
+                    </g>
+                </svg>
+            </div>
+
+            <!-- Spinner 3: Pulsing Dots -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Pulsing Dots</h3>
+                <svg class="spinner-svg" viewBox="0 0 100 100">
+                    <circle cx="30" cy="50" r="8" fill="#00dbde" class="pulse" />
+                    <circle cx="50" cy="50" r="8" fill="#fc00ff" class="pulse" style="animation-delay: 0.2s" />
+                    <circle cx="70" cy="50" r="8" fill="#00dbde" class="pulse" style="animation-delay: 0.4s" />
+                </svg>
+            </div>
+
+            <!-- Spinner 4: Infinity Loop -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Infinity Loop</h3>
+                <svg class="spinner-svg" viewBox="0 0 100 100">
+                    <path d="M20,50 Q35,20 50,50 Q65,80 80,50" fill="none" stroke="url(#grad3)" stroke-width="4"
+                        stroke-linecap="round" class="dash" />
+                    <defs>
+                        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#00dbde" />
+                            <stop offset="100%" stop-color="#fc00ff" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Spinner 5: Bouncing Bars -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Bouncing Bars</h3>
+                <svg class="spinner-svg" viewBox="0 0 100 60">
+                    <rect x="10" y="10" width="8" height="40" fill="#00dbde" class="wave" />
+                    <rect x="25" y="15" width="8" height="35" fill="#fc00ff" class="wave"
+                        style="animation-delay: 0.1s" />
+                    <rect x="40" y="5" width="8" height="45" fill="#00dbde" class="wave"
+                        style="animation-delay: 0.2s" />
+                    <rect x="55" y="15" width="8" height="35" fill="#fc00ff" class="wave"
+                        style="animation-delay: 0.3s" />
+                    <rect x="70" y="10" width="8" height="40" fill="#00dbde" class="wave"
+                        style="animation-delay: 0.4s" />
+                </svg>
+            </div>
+
+            <!-- Spinner 6: Morphing Shape -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Morphing Shape</h3>
+                <svg class="spinner-svg" viewBox="0 0 100 100">
+                    <path fill="url(#grad4)" class="morph color-shift" />
+                    <defs>
+                        <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00dbde" />
+                            <stop offset="100%" stop-color="#fc00ff" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Spinner 7: Orbiting Circles -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Orbiting Circles</h3>
+                <svg class="spinner-svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="3" fill="#00dbde" class="orbit" />
+                    <circle cx="50" cy="50" r="3" fill="#fc00ff" class="orbit" style="animation-delay: 0.5s" />
+                    <circle cx="50" cy="50" r="3" fill="#00dbde" class="orbit" style="animation-delay: 1s" />
+                </svg>
+            </div>
+
+            <!-- Spinner 8: Progress Ring -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Progress Ring</h3>
+                <svg class="spinner-svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="8" />
+                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#grad5)" stroke-width="8"
+                        stroke-linecap="round" stroke-dasharray="280" stroke-dashoffset="280" class="dash" />
+                    <defs>
+                        <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#00dbde" />
+                            <stop offset="100%" stop-color="#fc00ff" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+
+            <!-- Spinner 9: Ripple Effect -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Ripple Effect</h3>
+                <svg class="spinner-svg" viewBox="0 0 100 100">
+                    <circle cx="50" cy="50" r="10" fill="none" stroke="#00dbde" stroke-width="2" class="ripple" />
+                    <circle cx="50" cy="50" r="10" fill="none" stroke="#fc00ff" stroke-width="2" class="ripple"
+                        style="animation-delay: 0.5s" />
+                    <circle cx="50" cy="50" r="10" fill="none" stroke="#00dbde" stroke-width="2" class="ripple"
+                        style="animation-delay: 1s" />
+                </svg>
+            </div>
+
+            <!-- Spinner 10: Wave Form -->
+            <div class="spinner-card">
+                <h3 class="spinner-title">Wave Form</h3>
+                <svg class="spinner-svg" viewBox="0 0 100 60">
+                    <path d="M10,30 Q25,10 40,30 T70,30 T100,30" fill="none" stroke="url(#grad6)" stroke-width="3"
+                        class="pulse" />
+                    <path d="M10,40 Q25,20 40,40 T70,40 T100,40" fill="none" stroke="url(#grad7)" stroke-width="3"
+                        class="pulse" style="animation-delay: 0.5s" />
+                    <defs>
+                        <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#00dbde" />
+                            <stop offset="100%" stop-color="#fc00ff" />
+                        </linearGradient>
+                        <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" stop-color="#fc00ff" />
+                            <stop offset="100%" stop-color="#00dbde" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Initialize the morphing path with the starting path
+        document.addEventListener('DOMContentLoaded', function () {
+            const morphPath = document.querySelector('.morph');
+            morphPath.setAttribute('d', "M40,20 C50,10 70,10 80,20 C90,30 90,50 80,60 C70,70 50,70 40,60 C30,50 30,30 40,20 Z");
+        });
+    </script>
+</body>
+
+</html>
