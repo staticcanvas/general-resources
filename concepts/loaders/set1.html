@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10 More Premium SVG Loaders</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #0c0e1a, #1a1d2e);
+            color: #e2e8f0;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            background: linear-gradient(90deg, #60a5fa, #a78bfa, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #94a3b8;
+            font-size: 1.1rem;
+        }
+        
+        .loaders-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .loader-card {
+            background: rgba(30, 41, 59, 0.4);
+            border-radius: 1rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(100, 116, 139, 0.2);
+            backdrop-filter: blur(10px);
+        }
+        
+        .loader-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+        
+        .loader-title {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: #f1f5f9;
+            text-align: center;
+        }
+        
+        .loader-container {
+            width: 150px;
+            height: 150px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .loader-description {
+            color: #94a3b8;
+            text-align: center;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>10 More Premium SVG Loaders</h1>
+        <p class="subtitle">Fresh concepts with premium animations and effects</p>
+        
+        <div class="loaders-grid">
+            <!-- Quantum Flux -->
+            <div class="loader-card">
+                <h3 class="loader-title">Quantum Flux</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="quantumGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#7e22ce" />
+                                <stop offset="50%" stop-color="#c084fc" />
+                                <stop offset="100%" stop-color="#a855f7" />
+                            </linearGradient>
+                            <filter id="quantumGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="4" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <path d="M30,30 Q60,10 90,30 T150,30" fill="none" stroke="url(#quantumGrad)" stroke-width="3" stroke-linecap="round" filter="url(#quantumGlow)">
+                                <animate attributeName="d" 
+                                         values="M30,30 Q60,10 90,30 T150,30; M30,30 Q60,50 90,30 T150,30; M30,30 Q60,10 90,30 T150,30" 
+                                         dur="2s" repeatCount="indefinite" />
+                            </path>
+                            <path d="M30,60 Q60,40 90,60 T150,60" fill="none" stroke="url(#quantumGrad)" stroke-width="3" stroke-linecap="round" filter="url(#quantumGlow)">
+                                <animate attributeName="d" 
+                                         values="M30,60 Q60,40 90,60 T150,60; M30,60 Q60,80 90,60 T150,60; M30,60 Q60,40 90,60 T150,60" 
+                                         dur="2.5s" repeatCount="indefinite" />
+                            </path>
+                            <path d="M30,90 Q60,70 90,90 T150,90" fill="none" stroke="url(#quantumGrad)" stroke-width="3" stroke-linecap="round" filter="url(#quantumGlow)">
+                                <animate attributeName="d" 
+                                         values="M30,90 Q60,70 90,90 T150,90; M30,90 Q60,110 90,90 T150,90; M30,90 Q60,70 90,90 T150,90" 
+                                         dur="3s" repeatCount="indefinite" />
+                            </path>
+                            
+                            <circle cx="30" cy="30" r="4" fill="url(#quantumGrad)" filter="url(#quantumGlow)">
+                                <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="60" cy="30" r="4" fill="url(#quantumGrad)" filter="url(#quantumGlow)">
+                                <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite" begin="0.5s" />
+                            </circle>
+                            <circle cx="90" cy="30" r="4" fill="url(#quantumGrad)" filter="url(#quantumGlow)">
+                                <animate attributeName="r" values="3;5;3" dur="1.5s" repeatCount="indefinite" begin="1s" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Quantum energy flux with dynamic wave patterns and glowing nodes.</p>
+            </div>
+            
+            <!-- Hologram Sphere -->
+            <div class="loader-card">
+                <h3 class="loader-title">Hologram Sphere</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="hologramGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#0ea5e9" />
+                                <stop offset="50%" stop-color="#38bdf8" />
+                                <stop offset="100%" stop-color="#7dd3fc" />
+                            </linearGradient>
+                            <filter id="hologramGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <circle cx="60" cy="60" r="35" fill="none" stroke="url(#hologramGrad)" stroke-width="2" stroke-dasharray="5, 5" filter="url(#hologramGlow)">
+                                <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="4s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="60" cy="60" r="25" fill="none" stroke="url(#hologramGrad)" stroke-width="2" stroke-dasharray="3, 3" filter="url(#hologramGlow)">
+                                <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="3s" repeatCount="indefinite" />
+                            </circle>
+                            <circle cx="60" cy="60" r="15" fill="url(#hologramGrad)" opacity="0.7" filter="url(#hologramGlow)">
+                                <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Holographic sphere with rotating rings and pulsating core.</p>
+            </div>
+            
+            <!-- Nano Swarm -->
+            <div class="loader-card">
+                <h3 class="loader-title">Nano Swarm</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="nanoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#10b981" />
+                                <stop offset="50%" stop-color="#34d399" />
+                                <stop offset="100%" stop-color="#6ee7b7" />
+                            </linearGradient>
+                            <filter id="nanoGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="2" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <!-- Swarm particles -->
+                            <g>
+                                <circle cx="40" cy="40" r="2" fill="url(#nanoGrad)" filter="url(#nanoGlow)">
+                                    <animate attributeName="cx" values="40;50;40" dur="3s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="40;30;40" dur="3s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="80" cy="50" r="1.5" fill="url(#nanoGrad)" filter="url(#nanoGlow)">
+                                    <animate attributeName="cx" values="80;70;80" dur="4s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="50;60;50" dur="4s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="60" cy="80" r="2" fill="url(#nanoGrad)" filter="url(#nanoGlow)">
+                                    <animate attributeName="cx" values="60;70;60" dur="3.5s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="80;70;80" dur="3.5s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="30" cy="70" r="1.5" fill="url(#nanoGrad)" filter="url(#nanoGlow)">
+                                    <animate attributeName="cx" values="30;20;30" dur="2.5s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="70;80;70" dur="2.5s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="70" cy="30" r="2" fill="url(#nanoGrad)" filter="url(#nanoGlow)">
+                                    <animate attributeName="cx" values="70;80;70" dur="3s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="30;20;30" dur="3s" repeatCount="indefinite" />
+                                </circle>
+                            </g>
+                            
+                            <!-- Central field -->
+                            <circle cx="60" cy="60" r="20" fill="none" stroke="url(#nanoGrad)" stroke-width="1" stroke-dasharray="2, 2" filter="url(#nanoGlow)">
+                                <animate attributeName="r" values="18;22;18" dur="3s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Nano-technology swarm with particles moving in coordinated patterns.</p>
+            </div>
+            
+            <!-- Plasma Torus -->
+            <div class="loader-card">
+                <h3 class="loader-title">Plasma Torus</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="plasmaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#f43f5e" />
+                                <stop offset="50%" stop-color="#fb7185" />
+                                <stop offset="100%" stop-color="#fda4af" />
+                            </linearGradient>
+                            <filter id="plasmaGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="4" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <ellipse cx="60" cy="60" rx="35" ry="15" fill="none" stroke="url(#plasmaGrad)" stroke-width="3" filter="url(#plasmaGlow)">
+                                <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="4s" repeatCount="indefinite" />
+                            </ellipse>
+                            <ellipse cx="60" cy="60" rx="25" ry="10" fill="none" stroke="url(#plasmaGrad)" stroke-width="3" filter="url(#plasmaGlow)">
+                                <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="3s" repeatCount="indefinite" />
+                            </ellipse>
+                            <ellipse cx="60" cy="60" rx="15" ry="8" fill="url(#plasmaGrad)" filter="url(#plasmaGlow)">
+                                <animate attributeName="rx" values="12;18;12" dur="2s" repeatCount="indefinite" />
+                                <animate attributeName="ry" values="6;10;6" dur="2s" repeatCount="indefinite" />
+                            </ellipse>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Plasma energy torus with rotating elliptical rings and pulsating core.</p>
+            </div>
+            
+            <!-- Crystal Lattice -->
+            <div class="loader-card">
+                <h3 class="loader-title">Crystal Lattice</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="latticeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#8b5cf6" />
+                                <stop offset="50%" stop-color="#a78bfa" />
+                                <stop offset="100%" stop-color="#c4b5fd" />
+                            </linearGradient>
+                            <filter id="latticeGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <!-- Lattice structure -->
+                            <g stroke="url(#latticeGrad)" stroke-width="2" filter="url(#latticeGlow)">
+                                <line x1="30" y1="30" x2="90" y2="30">
+                                    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" />
+                                </line>
+                                <line x1="30" y1="50" x2="90" y2="50">
+                                    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.2s" />
+                                </line>
+                                <line x1="30" y1="70" x2="90" y2="70">
+                                    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.4s" />
+                                </line>
+                                <line x1="30" y1="90" x2="90" y2="90">
+                                    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.6s" />
+                                </line>
+                                
+                                <line x1="30" y1="30" x2="30" y2="90">
+                                    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.1s" />
+                                </line>
+                                <line x1="50" y1="30" x2="50" y2="90">
+                                    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.3s" />
+                                </line>
+                                <line x1="70" y1="30" x2="70" y2="90">
+                                    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.5s" />
+                                </line>
+                                <line x1="90" y1="30" x2="90" y2="90">
+                                    <animate attributeName="stroke-opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite" begin="0.7s" />
+                                </line>
+                            </g>
+                            
+                            <!-- Energy flow -->
+                            <circle cx="30" cy="30" r="3" fill="url(#latticeGrad)" filter="url(#latticeGlow)">
+                                <animate attributeName="cx" values="30;50;70;90;70;50;30" dur="4s" repeatCount="indefinite" />
+                                <animate attributeName="cy" values="30;50;70;90;70;50;30" dur="4s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Crystal lattice with sequential activation and energy flow.</p>
+            </div>
+            
+            <!-- Cyber Core -->
+            <div class="loader-card">
+                <h3 class="loader-title">Cyber Core</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="cyberGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#06b6d4" />
+                                <stop offset="50%" stop-color="#22d3ee" />
+                                <stop offset="100%" stop-color="#67e8f9" />
+                            </linearGradient>
+                            <filter id="cyberGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="4" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <rect x="40" y="40" width="40" height="40" fill="none" stroke="url(#cyberGrad)" stroke-width="3" stroke-dasharray="5, 5" filter="url(#cyberGlow)">
+                                <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="3s" repeatCount="indefinite" />
+                            </rect>
+                            <rect x="45" y="45" width="30" height="30" fill="none" stroke="url(#cyberGrad)" stroke-width="2" stroke-dasharray="3, 3" filter="url(#cyberGlow)">
+                                <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="2s" repeatCount="indefinite" />
+                            </rect>
+                            <rect x="50" y="50" width="20" height="20" fill="url(#cyberGrad)" filter="url(#cyberGlow)">
+                                <animate attributeName="width" values="15;25;15" dur="1.5s" repeatCount="indefinite" />
+                                <animate attributeName="height" values="15;25;15" dur="1.5s" repeatCount="indefinite" />
+                            </rect>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Cyber core with rotating squares and pulsating center.</p>
+            </div>
+            
+            <!-- Solar Flare -->
+            <div class="loader-card">
+                <h3 class="loader-title">Solar Flare</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="solarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#f59e0b" />
+                                <stop offset="50%" stop-color="#fbbf24" />
+                                <stop offset="100%" stop-color="#fcd34d" />
+                            </linearGradient>
+                            <filter id="solarGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="4" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <!-- Sun rays -->
+                            <g>
+                                <line x1="60" y1="20" x2="60" y2="40" stroke="url(#solarGrad)" stroke-width="3" stroke-linecap="round" filter="url(#solarGlow)">
+                                    <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="4s" repeatCount="indefinite" />
+                                </line>
+                                <line x1="60" y1="20" x2="60" y2="40" stroke="url(#solarGrad)" stroke-width="3" stroke-linecap="round" filter="url(#solarGlow)" transform="rotate(45 60 60)">
+                                    <animateTransform attributeName="transform" type="rotate" from="45 60 60" to="405 60 60" dur="4s" repeatCount="indefinite" />
+                                </line>
+                                <line x1="60" y1="20" x2="60" y2="40" stroke="url(#solarGrad)" stroke-width="3" stroke-linecap="round" filter="url(#solarGlow)" transform="rotate(90 60 60)">
+                                    <animateTransform attributeName="transform" type="rotate" from="90 60 60" to="450 60 60" dur="4s" repeatCount="indefinite" />
+                                </line>
+                                <line x1="60" y1="20" x2="60" y2="40" stroke="url(#solarGrad)" stroke-width="3" stroke-linecap="round" filter="url(#solarGlow)" transform="rotate(135 60 60)">
+                                    <animateTransform attributeName="transform" type="rotate" from="135 60 60" to="495 60 60" dur="4s" repeatCount="indefinite" />
+                                </line>
+                            </g>
+                            
+                            <!-- Sun core -->
+                            <circle cx="60" cy="60" r="15" fill="url(#solarGrad)" filter="url(#solarGlow)">
+                                <animate attributeName="r" values="12;18;12" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Solar flare with rotating rays and pulsating sun core.</p>
+            </div>
+            
+            <!-- Digital Matrix -->
+            <div class="loader-card">
+                <h3 class="loader-title">Digital Matrix</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="matrixGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#10b981" />
+                                <stop offset="50%" stop-color="#34d399" />
+                                <stop offset="100%" stop-color="#6ee7b7" />
+                            </linearGradient>
+                        </defs>
+                        <g font-family="monospace" font-size="10" fill="url(#matrixGrad)" text-anchor="middle">
+                            <!-- Falling digits -->
+                            <text x="30" y="20">1</text>
+                            <text x="30" y="35">0</text>
+                            <text x="30" y="50">1</text>
+                            <text x="30" y="65">0</text>
+                            <text x="30" y="80">1</text>
+                            <text x="30" y="95">1</text>
+                            <text x="30" y="110">0</text>
+                            
+                            <text x="50" y="15">0</text>
+                            <text x="50" y="30">1</text>
+                            <text x="50" y="45">1</text>
+                            <text x="50" y="60">0</text>
+                            <text x="50" y="75">1</text>
+                            <text x="50" y="90">0</text>
+                            <text x="50" y="105">1</text>
+                            
+                            <text x="70" y="25">1</text>
+                            <text x="70" y="40">0</text>
+                            <text x="70" y="55">1</text>
+                            <text x="70" y="70">1</text>
+                            <text x="70" y="85">0</text>
+                            <text x="70" y="100">1</text>
+                            <text x="70" y="115">0</text>
+                            
+                            <text x="90" y="20">0</text>
+                            <text x="90" y="35">1</text>
+                            <text x="90" y="50">0</text>
+                            <text x="90" y="65">1</text>
+                            <text x="90" y="80">0</text>
+                            <text x="90" y="95">1</text>
+                            <text x="90" y="110">1</text>
+                            
+                            <!-- Animation for falling effect -->
+                            <animateTransform attributeName="transform" type="translate" values="0,0; 0,10; 0,0" dur="2s" repeatCount="indefinite" />
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Digital matrix with falling binary code in green terminal style.</p>
+            </div>
+            
+            <!-- Nebula Cloud -->
+            <div class="loader-card">
+                <h3 class="loader-title">Nebula Cloud</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="nebulaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#7e22ce" />
+                                <stop offset="50%" stop-color="#c084fc" />
+                                <stop offset="100%" stop-color="#d8b4fe" />
+                            </linearGradient>
+                            <filter id="nebulaGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="5" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <!-- Nebula particles -->
+                            <g>
+                                <circle cx="40" cy="40" r="4" fill="url(#nebulaGrad)" opacity="0.7" filter="url(#nebulaGlow)">
+                                    <animate attributeName="cx" values="40;50;40" dur="4s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="40;30;40" dur="4s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="80" cy="50" r="3" fill="url(#nebulaGrad)" opacity="0.7" filter="url(#nebulaGlow)">
+                                    <animate attributeName="cx" values="80;70;80" dur="5s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="50;60;50" dur="5s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="60" cy="80" r="4" fill="url(#nebulaGrad)" opacity="0.7" filter="url(#nebulaGlow)">
+                                    <animate attributeName="cx" values="60;70;60" dur="4.5s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="80;70;80" dur="4.5s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="30" cy="70" r="3" fill="url(#nebulaGrad)" opacity="0.7" filter="url(#nebulaGlow)">
+                                    <animate attributeName="cx" values="30;20;30" dur="3.5s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="70;80;70" dur="3.5s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="70" cy="30" r="4" fill="url(#nebulaGrad)" opacity="0.7" filter="url(#nebulaGlow)">
+                                    <animate attributeName="cx" values="70;80;70" dur="4s" repeatCount="indefinite" />
+                                    <animate attributeName="cy" values="30;20;30" dur="4s" repeatCount="indefinite" />
+                                </circle>
+                            </g>
+                            
+                            <!-- Central glow -->
+                            <circle cx="60" cy="60" r="25" fill="url(#nebulaGrad)" opacity="0.3" filter="url(#nebulaGlow)">
+                                <animate attributeName="r" values="20;30;20" dur="5s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Cosmic nebula cloud with drifting particles and glowing center.</p>
+            </div>
+            
+            <!-- Atomic Orbit -->
+            <div class="loader-card">
+                <h3 class="loader-title">Atomic Orbit</h3>
+                <div class="loader-container">
+                    <svg width="120" height="120" viewBox="0 0 120 120">
+                        <defs>
+                            <linearGradient id="atomicGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" stop-color="#ef4444" />
+                                <stop offset="50%" stop-color="#f87171" />
+                                <stop offset="100%" stop-color="#fca5a5" />
+                            </linearGradient>
+                            <filter id="atomicGlow" x="-30%" y="-30%" width="160%" height="160%">
+                                <feGaussianBlur stdDeviation="3" result="blur" />
+                                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+                            </filter>
+                        </defs>
+                        <g>
+                            <!-- Nucleus -->
+                            <circle cx="60" cy="60" r="12" fill="url(#atomicGrad)" filter="url(#atomicGlow)">
+                                <animate attributeName="r" values="10;14;10" dur="2s" repeatCount="indefinite" />
+                            </circle>
+                            
+                            <!-- Electron orbits -->
+                            <g>
+                                <circle cx="30" cy="60" r="6" fill="url(#atomicGrad)" filter="url(#atomicGlow)">
+                                    <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="3s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="90" cy="60" r="6" fill="url(#atomicGrad)" filter="url(#atomicGlow)">
+                                    <animateTransform attributeName="transform" type="rotate" from="360 60 60" to="0 60 60" dur="3s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="60" cy="30" r="6" fill="url(#atomicGrad)" filter="url(#atomicGlow)">
+                                    <animateTransform attributeName="transform" type="rotate" from="180 60 60" to="540 60 60" dur="3s" repeatCount="indefinite" />
+                                </circle>
+                                <circle cx="60" cy="90" r="6" fill="url(#atomicGrad)" filter="url(#atomicGlow)">
+                                    <animateTransform attributeName="transform" type="rotate" from="540 60 60" to="180 60 60" dur="3s" repeatCount="indefinite" />
+                                </circle>
+                            </g>
+                            
+                            <!-- Orbital paths -->
+                            <circle cx="60" cy="60" r="30" fill="none" stroke="url(#atomicGrad)" stroke-width="1" stroke-dasharray="2, 2" opacity="0.5">
+                                <animateTransform attributeName="transform" type="rotate" from="0 60 60" to="360 60 60" dur="6s" repeatCount="indefinite" />
+                            </circle>
+                        </g>
+                    </svg>
+                </div>
+                <p class="loader-description">Atomic structure with orbiting electrons and pulsating nucleus.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

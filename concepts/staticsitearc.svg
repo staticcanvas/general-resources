@@ -1,0 +1,27 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="archGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ff7e5f"/>
+      <stop offset="100%" stop-color="#feb47b"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Site structure -->
+  <rect x="50" y="50" width="100" height="100" fill="none" stroke="url(#archGrad)" stroke-width="3"/>
+  
+  <!-- Content blocks -->
+  <rect x="60" y="60" width="80" height="20" fill="#ff7e5f" opacity="0.7"/>
+  <rect x="60" y="85" width="60" height="15" fill="#feb47b" opacity="0.7"/>
+  <rect x="60" y="105" width="70" height="10" fill="#ff7e5f" opacity="0.7"/>
+  <rect x="60" y="120" width="50" height="15" fill="#feb47b" opacity="0.7"/>
+  
+  <!-- Generator icons -->
+  <circle cx="85" cy="170" r="8" fill="#ff7e5f"/>
+  <circle cx="105" cy="170" r="8" fill="#feb47b"/>
+  <circle cx="125" cy="170" r="8" fill="#ff7e5f"/>
+  
+  <!-- Connection lines -->
+  <line x1="85" y1="150" x2="85" y2="162" stroke="url(#archGrad)" stroke-width="2"/>
+  <line x1="105" y1="150" x2="105" y2="162" stroke="url(#archGrad)" stroke-width="2"/>
+  <line x1="125" y1="150" x2="125" y2="162" stroke="url(#archGrad)" stroke-width="2"/>
+</svg>

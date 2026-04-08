@@ -1,0 +1,23 @@
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <defs>
+    <linearGradient id="pathGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#764ba2"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Scrolling path concept -->
+  <path d="M40 50 L80 50 L80 80 L120 80 L120 110 L160 110" 
+        fill="none" stroke="url(#pathGrad)" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Document/page outline -->
+  <rect x="30" y="30" width="140" height="140" fill="none" stroke="#2c3e50" stroke-width="2"/>
+  
+  <!-- Navigation dots -->
+  <circle cx="40" cy="50" r="6" fill="#e74c3c"/>
+  <circle cx="80" cy="50" r="4" fill="#3498db"/>
+  <circle cx="80" cy="80" r="4" fill="#3498db"/>
+  <circle cx="120" cy="80" r="4" fill="#3498db"/>
+  <circle cx="120" cy="110" r="4" fill="#3498db"/>
+  <circle cx="160" cy="110" r="6" fill="#27ae60"/>
+</svg>

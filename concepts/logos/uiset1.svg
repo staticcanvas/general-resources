@@ -1,0 +1,210 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Gradients -->
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="grad2" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#4facfe;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#00f2fe;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="grad4" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#43e97b;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#38f9d7;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#fa709a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#fee140;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="grad6" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#30cfd0;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#330867;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="grad7" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#a8edea;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#fed6e3;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="grad8" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ff9a56;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#ff6a88;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="grad9" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#ffecd2;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#fcb69f;stop-opacity:1" />
+        </linearGradient>
+
+        <linearGradient id="grad10" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#08aeea;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#2af598;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+
+    <!-- Background -->
+    <rect width="1200" height="800" fill="#f8f9fa" />
+
+    <!-- Title -->
+    <text x="600" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle"
+        fill="#333">Premium Gradient Logo Collection</text>
+
+    <!-- Row 1 -->
+    <!-- Logo 1: Hexagon -->
+    <g transform="translate(100, 100)">
+        <path d="M 50 10 L 90 30 L 90 70 L 50 90 L 10 70 L 10 30 Z" fill="url(#grad1)" />
+        <circle cx="50" cy="50" r="15" fill="white" opacity="0.3" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Hexagon</text>
+    </g>
+
+    <!-- Logo 2: Circle with arc -->
+    <g transform="translate(280, 100)">
+        <circle cx="50" cy="50" r="40" fill="url(#grad2)" />
+        <path d="M 50 10 A 40 40 0 0 1 90 50" stroke="white" stroke-width="6" fill="none" opacity="0.6" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Orbit</text>
+    </g>
+
+    <!-- Logo 3: Diamond -->
+    <g transform="translate(460, 100)">
+        <path d="M 50 10 L 90 50 L 50 90 L 10 50 Z" fill="url(#grad3)" />
+        <path d="M 50 30 L 70 50 L 50 70 L 30 50 Z" fill="white" opacity="0.3" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Diamond</text>
+    </g>
+
+    <!-- Logo 4: Triangle -->
+    <g transform="translate(640, 100)">
+        <path d="M 50 10 L 90 85 L 10 85 Z" fill="url(#grad4)" />
+        <circle cx="50" cy="55" r="12" fill="white" opacity="0.4" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Delta</text>
+    </g>
+
+    <!-- Logo 5: Rounded Square -->
+    <g transform="translate(820, 100)">
+        <rect x="10" y="10" width="80" height="80" rx="20" fill="url(#grad5)" />
+        <rect x="25" y="25" width="50" height="50" rx="10" fill="white" opacity="0.3" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Rounded</text>
+    </g>
+
+    <!-- Logo 6: Wave Circle -->
+    <g transform="translate(1000, 100)">
+        <circle cx="50" cy="50" r="40" fill="url(#grad6)" />
+        <path d="M 20 50 Q 30 35 40 50 T 60 50 T 80 50" stroke="white" stroke-width="5" fill="none" opacity="0.5" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">Wave</text>
+    </g>
+
+    <!-- Row 2 -->
+    <!-- Logo 7: Star -->
+    <g transform="translate(100, 300)">
+        <path d="M 50 10 L 60 40 L 90 40 L 65 60 L 75 90 L 50 70 L 25 90 L 35 60 L 10 40 L 40 40 Z"
+            fill="url(#grad7)" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">Star</text>
+    </g>
+
+    <!-- Logo 8: Layered Circles -->
+    <g transform="translate(280, 300)">
+        <circle cx="45" cy="45" r="35" fill="url(#grad8)" opacity="0.7" />
+        <circle cx="55" cy="55" r="35" fill="url(#grad8)" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Eclipse</text>
+    </g>
+
+    <!-- Logo 9: Pentagon -->
+    <g transform="translate(460, 300)">
+        <path d="M 50 10 L 88 38 L 73 82 L 27 82 L 12 38 Z" fill="url(#grad9)" />
+        <circle cx="50" cy="50" r="18" fill="white" opacity="0.35" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Pentagon</text>
+    </g>
+
+    <!-- Logo 10: Infinity -->
+    <g transform="translate(640, 300)">
+        <path
+            d="M 25 50 Q 25 25 40 25 Q 50 25 50 35 Q 50 45 60 45 Q 75 45 75 50 Q 75 55 60 55 Q 50 55 50 65 Q 50 75 40 75 Q 25 75 25 50 Z"
+            fill="url(#grad10)" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Infinity</text>
+    </g>
+
+    <!-- Logo 11: Leaf -->
+    <g transform="translate(820, 300)">
+        <path d="M 50 10 Q 80 30 85 60 Q 80 85 50 90 Q 50 70 50 50 Q 50 30 50 10 Z" fill="url(#grad1)" />
+        <path d="M 50 10 Q 20 30 15 60 Q 20 85 50 90" fill="url(#grad2)" opacity="0.6" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">Leaf</text>
+    </g>
+
+    <!-- Logo 12: Shield -->
+    <g transform="translate(1000, 300)">
+        <path d="M 50 10 L 85 25 L 85 55 Q 85 85 50 95 Q 15 85 15 55 L 15 25 Z" fill="url(#grad3)" />
+        <path d="M 50 25 L 72 35 L 72 55 Q 72 75 50 82 Q 28 75 28 55 L 28 35 Z" fill="white" opacity="0.3" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Shield</text>
+    </g>
+
+    <!-- Row 3 -->
+    <!-- Logo 13: Cube -->
+    <g transform="translate(100, 500)">
+        <path d="M 50 20 L 80 35 L 80 65 L 50 80 Z" fill="url(#grad4)" />
+        <path d="M 50 20 L 20 35 L 20 65 L 50 80 Z" fill="url(#grad4)" opacity="0.7" />
+        <path d="M 50 20 L 80 35 L 50 50 L 20 35 Z" fill="url(#grad4)" opacity="0.5" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">Cube</text>
+    </g>
+
+    <!-- Logo 14: Rings -->
+    <g transform="translate(280, 500)">
+        <circle cx="50" cy="50" r="38" stroke="url(#grad5)" stroke-width="5" fill="none" />
+        <circle cx="50" cy="50" r="28" stroke="url(#grad5)" stroke-width="4" fill="none" opacity="0.7" />
+        <circle cx="50" cy="50" r="18" stroke="url(#grad5)" stroke-width="3" fill="none" opacity="0.5" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Rings</text>
+    </g>
+
+    <!-- Logo 15: Arrow Up -->
+    <g transform="translate(460, 500)">
+        <circle cx="50" cy="50" r="40" fill="url(#grad6)" />
+        <path d="M 50 25 L 70 45 L 60 45 L 60 65 L 40 65 L 40 45 L 30 45 Z" fill="white" opacity="0.9" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Arrow</text>
+    </g>
+
+    <!-- Logo 16: Lightning -->
+    <g transform="translate(640, 500)">
+        <circle cx="50" cy="50" r="40" fill="url(#grad7)" />
+        <path d="M 55 15 L 40 50 L 50 50 L 45 85 L 65 45 L 55 45 Z" fill="url(#grad8)" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Lightning</text>
+    </g>
+
+    <!-- Logo 17: Heart -->
+    <g transform="translate(820, 500)">
+        <path d="M 50 80 L 20 50 Q 10 30 25 20 Q 40 10 50 25 Q 60 10 75 20 Q 90 30 80 50 Z" fill="url(#grad9)" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle"
+            fill="#666">Heart</text>
+    </g>
+
+    <!-- Logo 18: Gem -->
+    <g transform="translate(1000, 500)">
+        <path d="M 50 15 L 75 35 L 85 55 L 50 85 L 15 55 L 25 35 Z" fill="url(#grad10)" />
+        <path d="M 50 15 L 75 35 L 50 55 L 25 35 Z" fill="white" opacity="0.3" />
+        <path d="M 50 55 L 85 55 L 50 85 Z" fill="white" opacity="0.15" />
+        <text x="50" y="120" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">Gem</text>
+    </g>
+
+    <!-- Footer note -->
+    <text x="600" y="760" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#999">All logos are
+        scalable vectors • Perfect for UI/UX • Premium gradients</text>
+</svg>
